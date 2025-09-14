@@ -1,11 +1,11 @@
-function getFormvalue() {
+function getFormvalue(e) {
     e.preventDefault();
 
-	const FN = document.getElementById("fname").value;
-	const LN = document.getElementById("lname").value;
+	const FN = document.getElementById("fname").value.trim();
+	const LN = document.getElementById("lname").value.trim();
 
-	document.getElementById("result").innerText=
-		alter(`${FN}${LN}`);
+const fullName = `${FN} ${LN}`;
+	alert(fullName);
 	
-
+  document.getElementById("result").innerText = fullName;
 }
